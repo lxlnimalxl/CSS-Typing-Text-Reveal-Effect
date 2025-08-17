@@ -1,0 +1,37 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;   
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+h2{
+    position: relative;
+    font-size: 6em;
+    color: #222;
+}
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 190px;
+    overflow: hidden;
+    white-space: nowarp;
+    border-right: 4px solid #fff;
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px #fff);
+}
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100;
+    }
+}
